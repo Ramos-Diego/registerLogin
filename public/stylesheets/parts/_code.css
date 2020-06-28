@@ -1,0 +1,28 @@
+code, samp, time {
+  background:  var(--contrast);
+  color: var(--code);
+  padding: 5px 4px;
+  margin: 10px 0px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+pre > code {
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+var {
+  color: var(--variable);
+  font-style: normal;
+  font-family: monospace;
+}
+
+kbd {
+  background: var(--contrast);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text-main);
+  padding: 2px 4px 2px 4px;
+}

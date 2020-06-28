@@ -1,0 +1,102 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+label {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+input:not([type='checkbox'])
+li { 
+  padding-bottom: 4px;
+}
+
+ul, ol { 
+  text-align: left;
+  margin: 10px 0px 10px 15px;
+  list-style-position: inside;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: 10px 0px;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 6px;
+  text-align: left;
+}
+
+thead {
+  border-bottom: 1px solid var(--border);
+}
+
+tfoot {
+  border-top: 1px solid var(--border);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--contrast);
+}
+
+::selection {
+  background-color: var(--text-selection);
+}
+
+details {
+  border: 2px solid var(--contrast);
+  padding: 10px 10px 0;
+  margin: 1rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+details[open] {
+  padding: 10px;
+}
+
+details > :last-child {
+  margin-bottom: 0;
+}
+
+details[open] summary {
+  margin-bottom: 10px;
+}
+
+details:focus {
+  outline: 1px solid var(--links);
+}
+
+summary {
+  display: list-item;
+  background-color: var(--hover);
+  padding: 10px;
+  margin: -10px -10px 0;
+}
+
+details > :not(summary) {
+  margin-top: 0;
+}
+
+footer {
+  border-top: 1px solid var(--contrast);
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

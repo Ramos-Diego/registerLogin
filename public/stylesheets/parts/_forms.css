@@ -1,0 +1,147 @@
+button, select,
+input[type='submit'],
+input[type='button'],
+input[type='checkbox'],
+input[type='range'],
+input[type='radio'] {
+  cursor: pointer;
+}
+
+/* Overwrite browser's default 
+auto-complete design */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-main);
+  -webkit-box-shadow: 0 0 0px 1000px var(--contrast) inset;
+  box-shadow: inherit;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Range */
+input[type='range']{
+  display: inherit;
+  width: auto;
+  padding: 0;
+}
+
+/* Make checkbox and radio bigger */
+input[type='checkbox'],
+input[type='radio'] {
+  width: auto;
+  margin-right: 5px;
+  transform: scale(1.4, 1.4);
+}
+
+/* Optional, center headings */
+form > h3, form > h2 {
+  text-align: center;
+}
+
+form {
+  max-width: 300px;
+}
+
+/* 
+input, input:not([type="submit"]), :not(button){
+  background: transparent;
+} */
+
+/* User input design */
+input,
+button,
+textarea,
+select {
+  color: var(--text-main);
+  background: transparent;
+
+  font-family: inherit;
+  font-size: inherit;
+
+  margin: 6px 0px 12px 0px;
+  padding: 10px;
+  width: 100%;
+
+  border: 2px solid var(--form-border);
+  border-radius: 6px;
+  outline: none;
+}
+
+select{
+  background: var(--background);
+}
+
+/* Emphasize form submittions */
+input[type="submit"],
+button{
+  font-weight: bold;
+  color: var(--primary);
+  border: 2px solid var(--focus);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button:hover,
+input[type='submit']:hover,
+input[type='button']:hover,
+button:focus,
+input[type='submit']:focus,
+input[type='button']:focus {
+  background-color: var(--focus);
+  color: var(--background);
+}
+
+/* Improved visibility navigating with tab */
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  border: 2px solid var(--focus);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus{
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+/* Small animation for visual input confirmation */
+input[type='checkbox']:active,
+input[type='radio']:active,
+input[type='submit']:active,
+input[type='button']:active,
+input[type='range']:active,
+button:active {
+  transform: translateY(2px);
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+::placeholder {
+  color: var(--text-muted);
+}
+
+fieldset {
+  border: 1px var(--focus) solid;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+}

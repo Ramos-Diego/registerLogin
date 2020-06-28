@@ -1,0 +1,44 @@
+/* TODO *//* MEDIA QUERIES  */
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .container {
+    display: grid;
+    place-content: start stretch;
+    grid-template-rows: auto 5fr;
+    grid-template-columns: minmax(auto, 100px);
+  }
+/*   
+  .header {
+    grid-area: header;
+  }
+  
+  .content {
+    margin: auto; 
+  }  */
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .container{
+    place-content: start center;
+  }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .container {
+    grid-template-areas: 
+      "header header header"
+      ".      content     .";
+    grid-template-rows: 0.5fr 5fr 0.5fr;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  /* To Do */
+ }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <%- include('partials/_head.ejs') %>
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- NAVIGATION BAR -->
+    <nav class="header">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="/register">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      
+      <h2>Home</h2>
+      <% if (email) { %>
+      <p>Your email is: <strong><%= email %></strong></p>
+      <a href="/logout">Logout</a>
+      <% } %>
+      
+    </div>
+
+  </div>
+</body>
+
+</html>

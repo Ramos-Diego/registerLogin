@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+  <%- include('partials/_head.ejs') %>
+  <title>Register</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="header">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- REGISTER FORM -->
+    <form action="/register" method="POST" class="content">
+
+      <h2>Register</h2>
+
+      <%# EMAIL ALREADY EXISTS MESSAGE %>
+      <% if (flash) { _%>
+      <div class="<%= flash.type %>">
+        <%- flash.message %>
+      </div>
+      <% } _%>
+      
+      <label for="email" hidden>Email</label>
+      <input
+      name="email"
+      type="email"
+      value="<%= flash ? flash.email : '' %>"
+      placeholder="Email"
+      required
+      />
+      
+      <label for="password" hidden>Password</label>
+      <input
+      name="password"
+      type="password"
+      placeholder="Password"
+      required
+      />
+
+      <input type="submit" value="Register" />
+      
+    </form>
+  </div>
+</body>
+
+</html>

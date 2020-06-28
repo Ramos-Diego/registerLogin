@@ -1,0 +1,46 @@
+:root {
+  /* DARK */
+  --background: var(--dark-background);
+  --contrast: var(--dark);
+  --hover: var(--dark-hover);
+
+  --text-main: var(--light-disabled);
+  --text-bright: var(--light-hover);
+  --text-muted: var(--middle);
+  --text-selection: var(--light-dark);
+  --form-border: var(--dark-disabled);
+
+  --primary: var(--light-primary);
+  --focus: var(--light-primary);
+  --links: var(--light-primary);
+  --border: var(--light-primary);
+
+  --code: var(--white);
+  --animation-duration: 0.1s;
+  --variable: var(--light-success);
+  --highlight: var(--light-ternary);
+  --error: var(--dark-error);
+}
+
+/* CLASSES */
+.error, .success, .warning {
+  border-radius: 4px;
+  text-align: center;
+  padding: 4px 7px;
+  margin: 6px 0px 12px;
+}
+
+.error {
+  border: 2px solid var(--light-error);
+  color: var(--light-error);
+}
+
+.success {
+  border: 2px solid var(--light-success);
+  color: var(--light-success);
+}
+
+.warning {
+  border: 2px solid var(--light-warning);
+  color: var(--light-warning);
+}

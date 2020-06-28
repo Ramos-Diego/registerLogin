@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+  <%- include('partials/_head.ejs') %>
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="header">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="/register">Register</a></li>
+      </ul>
+    </nav>
+
+    <!-- LOGIN FORM -->
+    <form action="/login" method="POST" class="content">
+
+      <h2>Login</h2>
+
+      <%# WRONG EMAIL OR PASSWORD MESSAGE %>
+      <% if (flash) { _%>
+      <div class="<%= flash.type %>">
+        <%= flash.message %>
+      </div>
+      <% } _%>
+
+        <label for="email" hidden>Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value="<%= flash ? flash.email : "" %>"
+          placeholder="Email"
+          required
+          />
+          
+          <label for="password" hidden>Password</label>
+          <input
+          type="password"
+          name="password"
+          id="password"
+          <%# This may need to be deprecated! %> 
+          value="<%= (flash && flash.type === 'warning') ? flash.password : "" %>"
+          placeholder="Password"
+          required
+        />
+        
+         <%# HANDLE EMAIL VERIFICATION %>
+         <% if (flash && flash.type === "warning") { %>
+         
+          <label for="verificationCode" hidden>Verification</label>
+          <input 
+          name="verificationCode"
+          type="number"
+          placeholder="Verification code"
+          required
+          />
+          <% } _%>
+
+        <input type="submit" value="Login" />
+        
+    </form>
+
+  </div>
+</body>
+
+</html>

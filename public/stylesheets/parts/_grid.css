@@ -1,0 +1,18 @@
+/* DEFAULT GRID FOR PHONES */
+.container {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "content";
+  grid-template-rows: auto 1fr;
+}
+
+.header {
+  margin-top: 10px;
+  grid-area: header;
+}
+
+.content {
+  margin: auto;
+  grid-area: content;
+} 
